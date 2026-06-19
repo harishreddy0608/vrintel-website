@@ -208,30 +208,42 @@
             reporting, or data strategy?
         </p>
 
-        <form class="contact-form">
+        <form action="mailsend.php" method="POST" class="contact-form">
+  <div>
+    <label for="name">Your Name</label>
+    <input
+      type="text"
+      id="name"
+      name="name"
+      placeholder="Your Name"
+      required
+    />
+  </div>
 
-            <input
-                type="text"
-                placeholder="Your Name"
-                required
-            >
+  <div>
+    <label for="email">Your Email</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="Your Email"
+      required
+    />
+  </div>
 
-            <input
-                type="email"
-                placeholder="Your Email"
-                required
-            >
+  <div>
+    <label for="message">Tell us about your project</label>
+    <textarea
+      id="message"
+      name="message"
+      placeholder="Tell us about your project"
+      rows="6"
+      required
+    ></textarea>
+  </div>
 
-            <textarea
-                placeholder="Tell us about your project"
-                rows="6"
-            ></textarea>
-
-            <button type="submit" class="btn">
-                Submit
-            </button>
-
-        </form>
+  <button type="submit">Submit</button>
+</form>
 
         <p style="margin-top:30px;">
             Or email directly at:
